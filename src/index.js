@@ -1,4 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom";
+// Import React and ReactDOM
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// Render hello world.
