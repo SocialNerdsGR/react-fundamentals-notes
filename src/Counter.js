@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 
+/**
+ * - Implement decrement functionality
+ * - Initialize state from props
+ */
 export default class App extends Component {
   state = {
     count: 0
@@ -18,7 +22,7 @@ export default class App extends Component {
     return (
       <div>
         {this.state.count}
-        <button onClick={this.handleIncrement}>Increment!</button>
+        <button onClick={this.handleIncrement}>Increment</button>
       </div>
     );
   }
