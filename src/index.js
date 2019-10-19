@@ -1,31 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./style.css";
 
-/**
- * @hints
- * state:  const [value, setValue] = useState(initialValue);
- * input: value, onChange
- * form, input: onSubmit
- * @end
- */
-/**
- * - Handle input changes
- * - Check user credentials
- * - On failed login
- * -- Show error message
- * - On successful login
- * -- Clear inputs
- * -- Clear error
- * -- Alert user login
- */
 function LoginForm() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (email !== "thanos@socialnerds.gr" || password !== "password") {
+      setError("Incorrect username or password");
+      return;
+    }
+
+    setError("");
+    setEmail("");
+    setPassword("");
+    alert("You are logged in!");
+  }
   return (
-    <form>
-      <div className="error">Incorrect username or password</div>
-      <input name="email" type="email" required placeholder="Email" />
-      <input name="password" type="password" required placeholder="Password" />
-      <input type="submit" value="Login" />
+    <form onSubmit={handleSubmit}>
+      <div className="error">{error}</div>
+      <input
+        name="email"
+        type="email"
+        required
+        placeholder="Email"
+        value={email}
+        onChange={e => setEmail(e.target.value)}
+      />
+      <input
+        name="password"
+        type="password"
+        required
+        placeholder="Password"
+        value={password}
+        onChange={e => setPassword(e.target.value)}
+      />
+      <input type="submit" value="Login" onSubmit={handleSubmit} />
     </form>
   );
 }
