@@ -1,0 +1,27 @@
+form {
+  text-align: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 100px;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  padding: 20px;
+  font-size: 2rem;
+}
+
+input {
+  margin: 15px 0;
+  padding: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px;
+  background-color: #555555;
+  color: white;
+}
+
+.error {
+  color: tomato;
+  font-weight: bold;
+}
