@@ -10,7 +10,7 @@ function LoginForm() {
   function handleSubmit(e) {
     e.preventDefault();
     if (email !== "thanos@socialnerds.gr" || password !== "password") {
-      setError("Incorrect username or password");
+      setError("Incorrect username or password.");
       return;
     }
 
@@ -19,6 +19,7 @@ function LoginForm() {
     setPassword("");
     alert("You are logged in!");
   }
+
   return (
     <form onSubmit={handleSubmit}>
       <div className="error">{error}</div>
