@@ -7,6 +7,7 @@ import ReactDOM from "react-dom";
  * - Syntethic events
  * - Binding
  * - Parameters
+ * - Disable handler
  * - Function components
  */
 class App extends React.Component {
