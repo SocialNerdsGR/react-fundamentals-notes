@@ -6,6 +6,7 @@ import ReactDOM from "react-dom";
  * - https://hn.algolia.com/api/v1/search?query=react
  * - Render a list with the results
  * - Use only the title
+ * - Use objectID as unique id
  */
 class HackerNews extends React.Component {}
 
