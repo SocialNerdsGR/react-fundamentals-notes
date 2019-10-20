@@ -1,0 +1,53 @@
+body {
+  font-size: 1.1rem;
+}
+.app {
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+}
+
+.search {
+  width: 100%;
+  height: 30px;
+}
+
+button,
+input[type="submit"] {
+  height: 30px;
+  border: 0;
+  font-size: 1.1rem;
+  color: white;
+  background-color: cornflowerblue;
+}
+
+button:disabled {
+  background-color: darkgray;
+}
+.remove {
+  background-color: red;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  height: 100%;
+}
+
+.products {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.cart {
+  height: 100%;
+  border-left: black 1px solid;
+}
+
+.filters {
+  height: 100%;
+  border-right: black 1px solid;
+}
