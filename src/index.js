@@ -2,15 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 /**
- * - Components
- * - Using variables
- * - && operator
- * - Inline conditional operator
- * - Attrtibutes
- * - Prevent component to render
+ * - map, filter, reduce
+ * - Render lists
+ * - Keys
+ * - List components
+ * - Extract keys
+ * - Unique keys
  */
-function App() {
-  return <div></div>;
+function List() {
+  return <ul></ul>;
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<List />, document.getElementById("root"));
