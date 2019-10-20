@@ -1,5 +1,22 @@
 # Shopping cart
 
-- Fetch products from the API (use the api helper)
+- Import api helper
+- Fetch products from the API
 - Render products
--
+-- Name
+-- Price
+- Add to cart
+- Disable button if product quantity is 0
+- Render cart items
+- Remove from cart
+- Increase quantity
+- Decrease quantity
+- Handle search input
+- Pagination
+- Split components to different files
+-- Products
+-- Product
+-- Cart
+-- CartItem
+--CheckoutForm
+-- PriceSum
