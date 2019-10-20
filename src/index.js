@@ -2,15 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 /**
- * - map, filter, reduce
- * - Render lists
- * - Keys
- * - List components
- * - Extract keys
- * - Unique keys
+ * - What is lifecycle methods
+ * - Register events
+ * - Clear events
  */
-function List() {
-  return <ul></ul>;
+class Lifecycle extends React.Component {
+  render() {
+    return <h1>Hello world!</h1>;
+  }
 }
 
-ReactDOM.render(<List />, document.getElementById("root"));
+ReactDOM.render(<Lifecycle />, document.getElementById("root"));
