@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-function App() {
-  return <div></div>;
+class App extends React.Component{
+  render() {
+    return <div>Welcome Guest!</div>;
+  }
 }
 
 ReactDOM.render(<App />, document.getElementById("root"));
