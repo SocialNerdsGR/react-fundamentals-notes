@@ -2,12 +2,28 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 /**
- * - Use axios to load HN data
- * - https://hn.algolia.com/api/v1/search?query=react
- * - Render a list with the results
- * - Use only the title
- * - Use objectID as unique id
+ * - axios.get('https://hn.algolia.com/api/v1/search?query=react')
  */
-class HackerNews extends React.Component {}
+class HackerNews extends React.Component {
+  state = {
+    news: []
+  };
+
+  async componentDidMount() {
+    // Implement HTTP request here.
+  }
+
+  render() {
+    return <ul>
+      {
+        this.state.news.map((item => {
+          return <li>
+          {/*  Render each item here  */}
+          </li>
+        }))
+      }
+    </ul>
+  }
+}
 
 ReactDOM.render(<HackerNews />, document.getElementById("root"));
