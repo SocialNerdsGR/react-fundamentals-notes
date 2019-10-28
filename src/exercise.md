@@ -14,9 +14,9 @@
 - Handle search input
 - Pagination
 - Split components to different files
--- Products
--- Product
--- Cart
--- CartItem
---CheckoutForm
--- PriceSum
+   - Products
+   - Product
+   - Cart
+   - CartItem
+   - CheckoutForm
+   - PriceSum
