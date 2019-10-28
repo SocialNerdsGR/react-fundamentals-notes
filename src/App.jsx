@@ -18,6 +18,11 @@ export default class App extends React.Component {
 
   addToCart = (product) => {
     const { cartItems } = this.state;
+    const item = cartItems.find(item => item.id === product.id);
+    if (item) {
+      return;
+    }
+
     this.setState({cartItems: [product, ...cartItems]});
   };
 
@@ -42,7 +47,13 @@ export default class App extends React.Component {
           </div>
           <div className="cart">
             <ul>
-
+              {
+                cartItems.map(item => (
+                  <li key={item.id}>
+                    <span>{item.name}</span>
+                  </li>
+                ))
+              }
             </ul>
           </div>
         </div>
