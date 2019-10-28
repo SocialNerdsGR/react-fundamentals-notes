@@ -22,7 +22,7 @@ export default class App extends React.Component {
   };
 
   render() {
-    const {products} = this.state;
+    const {products, cartItems} = this.state;
 
     return (
       <div className="app">
@@ -40,7 +40,11 @@ export default class App extends React.Component {
               )
             }
           </div>
-          <div className="cart"></div>
+          <div className="cart">
+            <ul>
+
+            </ul>
+          </div>
         </div>
       </div>
     );
