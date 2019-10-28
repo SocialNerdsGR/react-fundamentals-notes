@@ -6,7 +6,8 @@ import CartItems from "./components/CartItems";
 export default class App extends React.Component {
   state = {
     products: [],
-    cartItems: []
+    cartItems: [],
+    showCheckoutForm: false
   };
 
   async componentDidMount() {
@@ -66,15 +67,26 @@ export default class App extends React.Component {
     this.setState({cartItems: [...items]});
   };
 
+  toggleCheckoutForm = () => {
+    this.setState({showCheckoutForm: true});
+  };
+
   render() {
-    const {products, cartItems} = this.state;
+    const {products, cartItems, showCheckoutForm} = this.state;
     return (
       <div className="app">
         <h1>SocialNerds</h1>
         <input className="search" type="text" placeholder="Search..."/>
         <div className="main">
           <Products products={products} addToCart={this.addToCart}/>
-          <CartItems cartItems={cartItems} decreaseQuantity={this.decreaseQuantity} increaseQuantity={this.increaseQuantity} removeFromCart={this.removeFromCart}/>
+          <CartItems
+            cartItems={cartItems}
+            decreaseQuantity={this.decreaseQuantity}
+            increaseQuantity={this.increaseQuantity}
+            removeFromCart={this.removeFromCart}
+            showCheckoutForm={showCheckoutForm}
+            toggleCheckoutForm={this.toggleCheckoutForm}
+          />
         </div>
       </div>
     );
