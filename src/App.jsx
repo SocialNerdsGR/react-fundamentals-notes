@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Products from "./components/Products";
+import CartItems from "./components/CartItems";
 
 export default class App extends React.Component {
   state = {
@@ -73,28 +74,7 @@ export default class App extends React.Component {
         <input className="search" type="text" placeholder="Search..."/>
         <div className="main">
           <Products products={products} addToCart={this.addToCart}/>
-          <div className="cart">
-            <ul>
-              {cartItems.map(item => (
-                <li key={item.id}>
-                  <span>{item.quantity}-</span>
-                  <span>{item.name}</span>
-                  <button onClick={() => this.increaseQuantity(item)}>+</button>
-                  <button onClick={() => this.decreaseQuantity(item)}>-</button>
-                  <button
-                    className={`cart-remove`}
-                    onClick={() => this.removeFromCart(item.id)}
-                  >
-                    x
-                  </button>
-                </li>
-              ))}
-              <div>
-                Total:
-                {cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0)}
-              </div>
-            </ul>
-          </div>
+          <CartItems cartItems={cartItems} decreaseQuantity={this.decreaseQuantity} increaseQuantity={this.increaseQuantity} removeFromCart={this.removeFromCart}/>
         </div>
       </div>
     );
