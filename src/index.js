@@ -19,15 +19,17 @@ import "./style.css";
  * -- Clear error
  * -- Alert user login
  */
-function LoginForm() {
-  return (
-    <form>
-      <div className="error">Incorrect username or password</div>
-      <input name="email" type="email" required placeholder="Email" />
-      <input name="password" type="password" required placeholder="Password" />
-      <input type="submit" value="Login" />
-    </form>
-  );
+class LoginForm extends React.Component {
+  render() {
+    return (
+      <form>
+        <div className="error">Incorrect username or password</div>
+        <input name="email" type="email" required placeholder="Email" />
+        <input name="password" type="password" required placeholder="Password" />
+        <input type="submit" value="Login" />
+      </form>
+    );
+  }
 }
 
 ReactDOM.render(<LoginForm />, document.getElementById("root"));
