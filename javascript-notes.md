@@ -98,7 +98,7 @@ for (var index = 0; index < 3; index++) {
 2
 ```
 
-Χρησιμοποιώντας το let keyword το index έχει block scope και είναι διαφορετικό σε κάθε επανάληψη.
+Χρησιμοποιώντας το let keyword, το index έχει block scope και είναι διαφορετικό σε κάθε επανάληψη.
 ```javascript
 for (let index = 0; index < 3; index++) {
   setTimeout(function() {
@@ -124,22 +124,38 @@ const name = "SocialNerds";
 Uncaught TypeError: Assignment to constant variable.
 ```
 
-Στην περίπτωση όμως που η τιμή της σταθεράς είναι object ή array μπορούμε να κάνουμε τα παρακάτω:
+Στην περίπτωση όμως που η τιμή της σταθεράς είναι object, μπορούμε να κάνουμε το παρακάτω:
 
 ```javascript
 const obj = { name: "SocialNerds" };
 console.log(obj.name); // SocialNerds;
 obj.name = "Thanos";
 console.log(obj.name); // Thanos;
+```
 
+Αλλά δεν μπορούμε να κάνουμε,
+```javascript
 obj = { name: "Giannis" };
 Uncaught TypeError: Assignment to constant variable.
+```
+Γιατί εμφανίζει,
+```javascript
+Uncaught TypeError: Assignment to constant variable.
+```
 
+Στην περίπτωση όμως που η τιμή της σταθεράς είναι array μπορούμε να κάνουμε το παρακάτω:
+```javascript
 const arr = [1, 2, 3];
 arr.push(4);
 console.log(arr) // 1, 2, 3, 4
+```
 
+Αλλά δεν μπορούμε να κάνουμε,
+```javascript
 arr = [];
+```
+Γιατί εμφανίζει,
+```javascript
 Uncaught TypeError: Assignment to constant variable.
 ```
 
