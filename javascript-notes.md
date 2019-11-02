@@ -32,7 +32,7 @@ if (true) {
 console.log(foo); // prints baz
 ```
 
-Ας δούμε τι συμβαίνει στο παραπάνω κομμάτι κώδικα. Δηλώνουμε μια μεταβλητή `foo` με τιμή `bar`. Στη συνέχεια, έχουμε μια `if` και μέσα της δηλώνουμε ξανά τη μεταβλητή `foo` αλλά αυτή τη φορά με την τιμή `baz`. Τέλος, κάνουμε print μέσα και έξω από την `if` τη μεταβλητή foo και βλέπουμε πως έχει την τιμή `baz`.
+Tι συμβαίνει στο παραπάνω κομμάτι κώδικα; Δηλώνουμε μια μεταβλητή `foo` με τιμή `bar`. Στη συνέχεια, έχουμε μια `if` και μέσα της δηλώνουμε ξανά τη μεταβλητή `foo`, αλλά αυτή τη φορά με την τιμή `baz`. Τέλος, κάνουμε print μέσα και έξω από την `if` τη μεταβλητή foo και βλέπουμε πως έχει την τιμή `baz`.
 
 Αυτό συμβαίνει διότι δεν υπάρχει κάποια `function` και οι 2 μεταβλητές ανήκουν στο global scope. Οι μεταβλητές που δηλώνουμε με το keyword `var` δεν ανήκουν στο block scope που δηλώθηκαν αν αυτό δεν ανήκει σε `function`.
 
@@ -63,7 +63,7 @@ if (true) {
 console.log(foo); // prints bar
 ```
 
-Βλέπουμε πως δηλώνοντας τη μεταβλητή `foo` με το `let` keyword ανήκει στο block scope της `if` και δεν κάνει override την τιμή της πάνω μεταβλητής `foo`.
+Βλέπουμε πως δηλώνοντας τη μεταβλητή `foo` με το `let` keyword ανήκει στο block scope της `if` και δεν κάνει override την τιμή της πρώτης μεταβλητής `foo`.
 
 Ένα κλασικό JavaScript quiz για μεταβλητές είναι το παρακάτω:
 
@@ -75,15 +75,15 @@ for (var index = 0; index < 3; index++) {
 }
 
 // Output
-3;
-3;
-3;
+3
+3
+3
 ```
 
 Μερικοί τρόποι για να το διορθώσουμε είναι οι παρακάτω:
 
+Στην πρώτη περίπτωση χρησιμοποιούμε μια IIFE (μια function που καλεί τον εαυτό της αμέσως - Immediately Invoked Function Expression) για να περάσουμε το index στην function και πλέον να έχει δικό της scope και όχι το global.
 ```javascript
-// Στην πρώτη περίπτωση χρησιμοποιούμε μια IIFE (μια function που καλεί τον εαυτό της αμέσως) για να περάσουμε το index στην function και πλέον να έχει δικό της scope και όχι το global.
 for (var index = 0; index < 3; index++) {
   (function(index) {
     setTimeout(function() {
@@ -93,11 +93,13 @@ for (var index = 0; index < 3; index++) {
 }
 
 // Output
-0;
-1;
-2;
+0
+1
+2
+```
 
-// Χρησιμοποιώντας το let keyword το index έχει block scope και είναι διαφορετικό σε κάθε επανάληψη.
+Χρησιμοποιώντας το let keyword το index έχει block scope και είναι διαφορετικό σε κάθε επανάληψη.
+```javascript
 for (let index = 0; index < 3; index++) {
   setTimeout(function() {
     console.log(index);
@@ -105,9 +107,9 @@ for (let index = 0; index < 3; index++) {
 }
 
 // Output
-0;
-1;
-2;
+0
+1
+2
 ```
 
 Ο δεύτερος τρόπος για να δηλώσουμε 'μεταβλητές' είναι με το keyword const. Δεν είναι τόσο μεταβλητές βέβαια όσο σταθερές.
@@ -145,13 +147,13 @@ Uncaught TypeError: Assignment to constant variable.
 
 Τα template literals είναι ένας νέος τρόπος για να γράφουμε strings. Ως τώρα μπορούσαμε να δηλώσουμε ένα string χρησιμοποιώντας single και double quotes (", ') . Πλέον έχουμε τη δυνατότητα να το κάνουμε χρησιμοποιώντας back-ticks (`).
 
-Τι διαφορές έχει όμως με τους προηγούμενους τρόπους;
-
 Αρχικά, μπορούμε να φτιάξουμε ένα string πολλών γραμμών χωρίς να χρειάζεται να κάνουμε κάτι ιδιαίτερο.
 
 ```javascript
 let paragraph = `
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 `;
 ```
 
@@ -159,7 +161,8 @@ let paragraph = `
 
 ```javascript
 let paragraph = "
-  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's \n standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a \n type specimen book.
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's \n 
+  standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a \n type specimen book.
 ";
 ```
 
@@ -168,6 +171,8 @@ let paragraph = "
 ```javascript
 const name = "Thanos";
 const message = `Hello, ${name}`;
+
+console.log(message) // prints Hello, Thanos
 ```
 
 Αλλά να καλέσουμε ακόμα και functions.
@@ -185,14 +190,14 @@ console.log(color); // btn btn-red
 
 Η arrow function είναι μια νέα σύνταξη της JavaScript για να γράφουμε function expressions. Πέρα από τη διαφορετική σύνταξη έχει ακόμα μια σημαντική διαφορά που είναι ότι δεν δημιουργεί δικό της context, δηλαδή this.
 
-Ας δούμε για αρχή πως μπορούμε να συντάξουμε μια function χρησιμοποιώντας arrow function.
+Ας δούμε για αρχή πως μπορούμε να συντάξουμε μια arrow function.
 
-Η σύνταξη της είναι πολύ απλή καθώς δεν χρειάζεται να γράψουμε καμία λέξη: `() => {}`. Ξεκινάει με παρενθέσεις που μέσα δηλώνουμε τις παραμέτρους της function `()`, στη συνέχεια, από ένα `fat arrow =>` και τέλος από αγκύλες που μέσα υπάρχει ο κώδικας της function μας.
+Η σύνταξη της είναι πολύ απλή καθώς δεν χρειάζεται να γράψουμε καμία λέξη: `() => {}`. Ξεκινάει με παρενθέσεις που μέσα δηλώνουμε τις παραμέτρους της function `(param1, param2)`, στη συνέχεια, από ένα fat arrow `=>` και τέλος από αγκύλες που μέσα υπάρχει ο κώδικας της function μας.
 
 Πάμε να δούμε πως μπορούμε να φτιάξουμε μια function που προσθέτει 2 αριθμούς χρησιμοποιώντας μια arrow function.
 
 ```javascript
- Αρχικά αναθέτουμε τη συνάρτησή μας σε μια μεταβλητή για να μπορέσουμε να την καλέσουμε αργότερα.
+ Aναθέτουμε τη συνάρτησή μας σε μια μεταβλητή για να μπορέσουμε να την καλέσουμε αργότερα.
 const add = (a, b) => {
   return a + b;
 };
@@ -306,7 +311,7 @@ Person.getName(); // Thanos
 Person.getAsyncName(1000); // Thanos
 ```
 
-Χρησιμοποιώντας `arrow function` αντί για function το πρόβλημα λύνεται διότι όταν καλεστεί από τον browser μετά από ένα δευτερόλεπτο δεν θα δημιουργήσει δικό της context αλλά θα χρησιμοποιήσει εκείνο της `getAsyncName`, όπου δηλώθηκε.
+Χρησιμοποιώντας `arrow function` αντί για function, το πρόβλημα λύνεται διότι όταν καλεστεί από τον browser μετά από ένα δευτερόλεπτο δεν θα δημιουργήσει δικό της context αλλά θα χρησιμοποιήσει εκείνο της `getAsyncName`.
 
 ```javascript
 const Person = {
@@ -343,7 +348,7 @@ const obj = { name }; // Αντί για { name: name };.
 
 Το object destructuring μας επιτρέπει να τραβήξουμε κάποιες τιμές από ένα object και να τις αναθέσουμε σε μεταβλητές.
 
-Ο τρόπος για να εξάγουμε αυτές τις τιμές είναι δηλώνοντας ένα object με κλειδιά τις τιμές που θέλουμε από το υπάρχον object.
+Ο τρόπος για να εξάγουμε αυτές τις τιμές, είναι δηλώνοντας μέσα σε άγκιστρα `{ }` τα κλειδιά που θέλουμε από το object.
 
 ```javascript
 const user = {
@@ -395,7 +400,7 @@ console.log(first, second); // Thanos, Dimitris
 
 Όταν θέλουμε να δημιουργήσουμε ένα καινούργιο object ή array χρησιμοποιώντας τις τιμές από ένα ήδη υπάρχον object ή array ο spread operator είναι πολύ χρήσιμος. Η σύνταξη είναι πολύ απλή και το μόνο που πρέπει να κάνουμε είναι να προσθέσουμε τρεις τελείες μπροστά από το object ή το array: `...{name: 'Thanos', age: 26}`, `...[1, 2, 3]`.
 
-Μπορούμε να έχουμε στο νου μας, πως αυτό που κάνει ο spread operator είναι ότι αφαιρεί τον container, δηλαδή τις αγκύλες σε περίπτωση array ή τα άγκιστρα σε περίπτωση object, με αποτέλεσμα να μπορούμε να χρησιμοποιήσουμε τις τιμές σε ένα νέο object ή array.
+Μπορούμε να φανταστούμε, πως αυτό που κάνει ο spread operator είναι ότι αφαιρεί τον container, δηλαδή τις αγκύλες σε περίπτωση array ή τα άγκιστρα σε περίπτωση object, με αποτέλεσμα να μπορούμε να χρησιμοποιήσουμε τις τιμές σε ένα νέο object ή array.
 
 Για να δούμε μερικά παραδείγματα για το πως δουλεύει:
 
@@ -511,13 +516,6 @@ function log(severity, ...messages) {
 log("table", "Hello", "Nerds", "!");
 ```
 
-`Output`
-| (index) | Value |
-| ------- | ----- |
-| 0 | Hello |
-| 1 | Nerds |
-| 2 | ! |
-
 ## Array functions
 
 Πλέον στην JavaScript υπάρχουν μερικές functions που κάνουν την διαχείριση των arrays πολύ εύκολη. Είναι σημαντικό να θυμάστε πως αυτές οι functions δεν επηρεάζουν το υπάρχον array αλλά δημιουργούν ένα νέο.
@@ -624,8 +622,6 @@ console.log(sum); // 87
 Στις νέες εκδόσεις της JavaScript έχουμε τη δυνατότητα να χωρίσουμε τον κώδικα μας σε μικρά επαναχρησιμοποιήσιμα αρχεία. Αυτά τα αρχεία ονομάζονται modules.
 Για να μπορέσουμε να δημιουργήσουμε ένα module πρέπει να ορίσουμε τον τρόπο με τον οποίο ενα module θα μπορεί να χρησιμοποιήσει ένα άλλο.
 
-Με αυτό τον τρόπο μπορούμε να δημοσιεύσουμε τον κώδικα μας ώστε να τον χρησιμοποιήσουν άλλοι προγραμματιστές ή ακόμα καλύτερα να χρησιμοποιήσουμε εμείς κώδικα άλλων προγραμματιστών.
-
 Ας ξεκινήσουμε με το πως μπορούμε να εξάγουμε τον κώδικά μας.
 
 Έστω πως έχουμε φτιάξει μια function που προσθέτει 2 αριθμούς.
@@ -659,9 +655,9 @@ console.log(add(1, 2)); // 3
 
 ```
 utils
-add.js
+- add.js
 lib
-tax.js
+- tax.js
 ```
 
 Σε αυτό το παράδειγμα θέλουμε να χρησιμοποιήσουμε τη function add στο αρχείο tax.js, για να κάνουμε import θα έπρεπε να γράψουμε το παρακάτω.
