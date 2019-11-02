@@ -124,32 +124,28 @@ const name = "SocialNerds";
 Uncaught TypeError: Assignment to constant variable.
 ```
 
-Στην περίπτωση όμως που η τιμή της σταθεράς είναι object, μπορούμε να κάνουμε το παρακάτω:
-
+Στην περίπτωση που η τιμή της σταθεράς είναι object, μπορούμε να κάνουμε το παρακάτω:
 ```javascript
 const obj = { name: "SocialNerds" };
 console.log(obj.name); // SocialNerds;
 obj.name = "Thanos";
 console.log(obj.name); // Thanos;
 ```
-
 Αλλά δεν μπορούμε να κάνουμε,
 ```javascript
 obj = { name: "Giannis" };
-Uncaught TypeError: Assignment to constant variable.
 ```
 Γιατί εμφανίζει,
 ```javascript
 Uncaught TypeError: Assignment to constant variable.
 ```
 
-Στην περίπτωση όμως που η τιμή της σταθεράς είναι array μπορούμε να κάνουμε το παρακάτω:
+Στην περίπτωση που η τιμή της σταθεράς είναι array, μπορούμε να κάνουμε το παρακάτω:
 ```javascript
 const arr = [1, 2, 3];
 arr.push(4);
 console.log(arr) // 1, 2, 3, 4
 ```
-
 Αλλά δεν μπορούμε να κάνουμε,
 ```javascript
 arr = [];
