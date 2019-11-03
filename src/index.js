@@ -1,15 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-/**
- * - Difference from other DOM elements
- * - Controlled
- * - Input
- * - Checkbox
- * - Select
- * - Multiple inputs
- * - Read-only
- */
 class Form extends React.Component {
   render() {
     return (
