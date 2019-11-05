@@ -1,13 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+
+function Authenticated(props) {
+  return (
+    <h1>Hello {props.name}</h1>
+  );
+}
+
+function Guest() {
+  return (
+    <h1>Hello Guest</h1>
+  );
+}
+
 class App extends React.Component {
   state = {
-    logged: false
+    authenticated: false
   };
 
   render() {
-    return <div>Welcome Guest!</div>;
+    if (this.state.authenticated) {
+      return <Authenticated name={'Thanos'}/>
+    }
+
+    return <Guest />
   }
 }
 
