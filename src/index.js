@@ -33,10 +33,6 @@ class List extends React.Component {
     movies: startWarsMovies
   };
 
-  /**
-   *  Array.map((item) => (/return element here/));
-   *  key={}
-   */
   render() {
     return <ul></ul>;
   }
