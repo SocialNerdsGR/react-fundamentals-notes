@@ -28,13 +28,27 @@ const startWarsMovies = [
   }
 ];
 
+function Movie({title, episode_number}) {
+  return <li>{title}</li>;
+}
+
 class List extends React.Component {
   state = {
     movies: startWarsMovies
   };
 
   render() {
-    return <ul></ul>;
+    const { movies } = this.state;
+    const bestMovies = movies.filter(movie => movie.episode_number > 3);
+
+    return <React.Fragment>
+      <h1>Star wars movies</h1>
+      <ul>{movies.map(movie => <li key={movie.episode_number}>{movie.title}</li>)}</ul>
+      <h1>Separate component</h1>
+      <ul>{movies.map(movie => <Movie key={movie.episode_number} title={movie.title}/>)}</ul>
+      <h1>Best movies</h1>
+      <ul>{bestMovies.map(movie => <li key={movie.episode_number}>{movie.title}</li>)}</ul>
+    </React.Fragment>;
   }
 }
 
