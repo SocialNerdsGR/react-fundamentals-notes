@@ -9,7 +9,7 @@ export default class App extends React.Component {
 
   async componentDidMount() {
     try {
-      const response = await axios.get('http://localhost:3001/products');
+      const response = await axios.get('https://shopping-cart-json-server.herokuapp.com/products');
       this.setState({products: response.data});
     } catch (e) {
       alert('Something went wrong!');
@@ -17,12 +17,12 @@ export default class App extends React.Component {
   }
 
   addToCart = (product) => {
-    const { cartItems } = this.state;
+    const {cartItems} = this.state;
     this.setState({cartItems: [product, ...cartItems]});
   };
 
   render() {
-    const {products, cartItems} = this.state;
+    const {products} = this.state;
 
     return (
       <div className="app">
@@ -34,7 +34,7 @@ export default class App extends React.Component {
               products.map(product => (
                   <div key={product.id}>
                     <h4>{product.name} - {product.price}</h4>
-                    <button disabled={!product.available} onClick={() => this.addToCart(product)} >Add to cart</button>
+                    <button disabled={!product.available} onClick={() => this.addToCart(product)}>Add to cart</button>
                   </div>
                 )
               )
