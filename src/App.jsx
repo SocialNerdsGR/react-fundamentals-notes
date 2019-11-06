@@ -26,14 +26,6 @@ export default class App extends React.Component {
     this.setState({cartItems: [product, ...cartItems]});
   };
 
-  removeFromCart = (id) => {
-    const { cartItems } = this.state;
-    const items = cartItems.filter(cartItem => {
-      return cartItem.id !== id;
-    });
-    this.setState({cartItems: items});
-  };
-
   render() {
     const {products, cartItems} = this.state;
 
@@ -59,7 +51,6 @@ export default class App extends React.Component {
                 cartItems.map(cartItem => (
                   <li key={cartItem.id}>
                     <span>{cartItem.name}</span>
-                    <button className="remove" onClick={() => this.removeFromCart(cartItem.id)}>x</button>
                   </li>
                 ))
               }
