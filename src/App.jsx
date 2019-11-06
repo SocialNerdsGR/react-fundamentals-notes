@@ -49,6 +49,10 @@ export default class App extends React.Component {
   decreaseQuantity = (cartItem) => {
     const {cartItems} = this.state;
 
+    if (cartItem.quantity === 1) {
+      return this.removeFromCart(cartItem.id);
+    }
+
     const items = cartItems.map(item => {
       if (item.id === cartItem.id) {
         return {...item, quantity: item.quantity - 1};
