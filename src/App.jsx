@@ -17,7 +17,7 @@ export default class App extends React.Component {
   }
 
   addToCart = (product) => {
-    const { cartItems } = this.state;
+    const {cartItems} = this.state;
     const item = cartItems.find(item => item.id === product.id);
     if (item) {
       return this.increaseQuantity(product);
@@ -27,7 +27,7 @@ export default class App extends React.Component {
   };
 
   removeFromCart = (id) => {
-    const { cartItems } = this.state;
+    const {cartItems} = this.state;
     const filteredItems = cartItems.filter(item => item.id !== id);
     this.setState({cartItems: filteredItems});
   };
@@ -77,7 +77,7 @@ export default class App extends React.Component {
               products.map(product => (
                   <div key={product.id}>
                     <h4>{product.name} - {product.price}</h4>
-                    <button disabled={!product.available} onClick={() => this.addToCart(product)} >Add to cart</button>
+                    <button disabled={!product.available} onClick={() => this.addToCart(product)}>Add to cart</button>
                   </div>
                 )
               )
@@ -97,6 +97,13 @@ export default class App extends React.Component {
                 ))
               }
             </ul>
+            <div>
+              <h4>Total:
+                <span>{cartItems.reduce((total, cartItem) => {
+                  return total + cartItem.quantity * cartItem.price
+                }, 0)}</span>
+              </h4>
+            </div>
           </div>
         </div>
       </div>
