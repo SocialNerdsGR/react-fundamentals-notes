@@ -29,7 +29,6 @@ export default class App extends React.Component {
   removeFromCart = (id) => {
     const { cartItems } = this.state;
     const items = cartItems.filter(cartItem => {
-      console.log(cartItem.id === id);
       return cartItem.id !== id;
     });
     this.setState({cartItems: items});
