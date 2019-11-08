@@ -3,12 +3,17 @@ import ReactDOM from "react-dom";
 
 class Counter extends React.Component {
   state = {
-    count: 0
+    count: this.props.count
   };
 
   handleIncrement = () => {
     const { count } = this.state;
-    this.setState({count: count + 1});
+    this.setState({count: count + this.props.state});
+  };
+
+  handleDecrement = () => {
+    const { count } = this.state;
+    this.setState({count: count - this.props.state});
   };
 
   render() {
@@ -16,10 +21,11 @@ class Counter extends React.Component {
       <div>
         {this.state.count}
         <button onClick={this.handleIncrement}>Increment</button>
+        <button onClick={this.handleDecrement}>Decrement</button>
       </div>
     );
   }
 }
 
 
-ReactDOM.render(<Counter />, document.querySelector("#root"));
+ReactDOM.render(<Counter step={2} count={5} />, document.querySelector("#root"));
