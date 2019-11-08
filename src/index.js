@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-class App extends React.Component {
+class Counter extends React.Component {
   state = {
     count: 0
   };
@@ -22,4 +22,4 @@ class App extends React.Component {
 }
 
 
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(<Counter />, document.querySelector("#root"));
