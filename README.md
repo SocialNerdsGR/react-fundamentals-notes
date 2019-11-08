@@ -2,9 +2,9 @@
 
 - [JSX](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/01-jsx)
 - [Rendering](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/02-rendering)
-- [Hello world example](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/03-hello-world) - [Solution](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/03-hello-world-solution)
+- [Hello world example](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/03-hello-world) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/03-hello-world-completed)
 - [Components](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/04-components)
-- [Components example](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/04-components-example) - [Solution](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/04-components-solution)
+- [Components example](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/04-components-example) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/04-components-completed)
 - [State](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/05-state)
 - [Events handling](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/06-events-handling)
 - [Counter example](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/07-counter) - [Solution](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/07-counter-solution)
