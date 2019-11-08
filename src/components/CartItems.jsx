@@ -21,7 +21,9 @@ const CartItems = ({cartItems, increaseQuantity, decreaseQuantity, removeFromCar
         ))}
         <div>
           Total:
-          {cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0)}
+          <span>
+            {cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0)}
+          </span>
         </div>
       </ul>
     </div>
