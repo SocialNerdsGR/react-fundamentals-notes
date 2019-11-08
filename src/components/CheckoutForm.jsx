@@ -8,16 +8,12 @@ class CheckoutForm extends React.Component {
   };
 
   formHandler = (event) => {
-    // alert(JSON.stringify({
-    //   name,
-    //   email,
-    //   address
-    // }));
+    alert(JSON.stringify(this.state));
   };
 
   render() {
     return (
-      <form onSubmit={}>
+      <form>
         <ul>
         </ul>
         <div>
@@ -26,15 +22,15 @@ class CheckoutForm extends React.Component {
         </div>
         <div>
           Name:
-          <input type="text" required value={} onChange={}/>
+          <input type="text" required/>
         </div>
         <div>
           Email:
-          <input type="email" required value={} onChange={}/>
+          <input type="email" required/>
         </div>
         <div>
           Address:
-          <input type="text" required value={} onChange={}/>
+          <input type="text" required/>
         </div>
         <div>
           <input type="submit" value="Pay"/>

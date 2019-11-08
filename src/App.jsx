@@ -6,19 +6,20 @@ import CartItems from "./components/CartItems";
 export default class App extends React.Component {
   state = {
     products: [],
-    cartItems: []
+    cartItems: [],
+    checkoutFormVisible: false
   };
 
   async componentDidMount() {
     try {
-      const response = await axios.get("http://localhost:3001/products");
+      const response = await axios.get("https://shopping-cart-json-server.herokuapp.com/products");
       this.setState({products: response.data});
     } catch (e) {
       alert("Something went wrong!");
     }
   }
 
-  addToCart = product => {
+  addToCart = (product) => {
     const {cartItems} = this.state;
     const item = cartItems.find(item => item.id === product.id);
     if (item) {
@@ -28,13 +29,13 @@ export default class App extends React.Component {
     this.setState({cartItems: [{...product, quantity: 1}, ...cartItems]});
   };
 
-  removeFromCart = id => {
+  removeFromCart = (id) => {
     const {cartItems} = this.state;
     const filteredItems = cartItems.filter(item => item.id !== id);
     this.setState({cartItems: filteredItems});
   };
 
-  increaseQuantity = product => {
+  increaseQuantity = (product) => {
     const {cartItems} = this.state;
 
     const items = cartItems.map(item => {
@@ -48,7 +49,7 @@ export default class App extends React.Component {
     this.setState({cartItems: [...items]});
   };
 
-  decreaseQuantity = product => {
+  decreaseQuantity = (product) => {
     const {cartItems} = this.state;
 
     if (product.quantity === 1) {
@@ -66,15 +67,28 @@ export default class App extends React.Component {
     this.setState({cartItems: [...items]});
   };
 
+  showCheckoutForm = () => {
+    this.setState({checkoutFormVisible: true});
+  };
+
   render() {
-    const {products, cartItems} = this.state;
+    const {products, cartItems, checkoutFormVisible} = this.state;
     return (
       <div className="app">
         <h1>SocialNerds</h1>
         <input className="search" type="text" placeholder="Search..."/>
         <div className="main">
-          <Products products={products} addToCart={this.addToCart}/>
-          <CartItems cartItems={cartItems} decreaseQuantity={this.decreaseQuantity} increaseQuantity={this.increaseQuantity} removeFromCart={this.removeFromCart}/>
+          <Products
+            products={products}
+            addToCart={this.addToCart}/>
+          <CartItems
+            cartItems={cartItems}
+            decreaseQuantity={this.decreaseQuantity}
+            increaseQuantity={this.increaseQuantity}
+            removeFromCart={this.removeFromCart}
+            checkoutFormVisible={checkoutFormVisible}
+            showCheckoutForm={this.showCheckoutForm}
+          />
         </div>
       </div>
     );
