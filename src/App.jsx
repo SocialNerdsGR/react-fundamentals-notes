@@ -17,7 +17,7 @@ export default class App extends React.Component {
     }
   }
 
-  addToCart = product => {
+  addToCart = (product) => {
     const {cartItems} = this.state;
     const item = cartItems.find(item => item.id === product.id);
     if (item) {
@@ -27,13 +27,13 @@ export default class App extends React.Component {
     this.setState({cartItems: [{...product, quantity: 1}, ...cartItems]});
   };
 
-  removeFromCart = id => {
+  removeFromCart = (id) => {
     const {cartItems} = this.state;
     const filteredItems = cartItems.filter(item => item.id !== id);
     this.setState({cartItems: filteredItems});
   };
 
-  increaseQuantity = cartItem => {
+  increaseQuantity = (cartItem) => {
     const {cartItems} = this.state;
 
     const items = cartItems.map(item => {
@@ -47,7 +47,7 @@ export default class App extends React.Component {
     this.setState({cartItems: [...items]});
   };
 
-  decreaseQuantity = cartItem => {
+  decreaseQuantity = (cartItem) => {
     const {cartItems} = this.state;
 
     if (cartItem.quantity === 1) {
@@ -91,6 +91,9 @@ export default class App extends React.Component {
               ))}
               <div>
                 Total:
+                <span>{cartItems.reduce((total, cartItem) => {
+                  return total + cartItem.quantity * cartItem.price
+                }, 0)}</span>
               </div>
             </ul>
           </div>
