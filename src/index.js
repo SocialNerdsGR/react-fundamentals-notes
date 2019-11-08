@@ -4,18 +4,14 @@ import "./style.css";
 
 class LoginForm extends React.Component {
   state = {
-    error: '',
     email: '',
     password: ''
   };
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const {email, password} = this.state;
-    if (email !== 'thanos@socialnerds.gr' || password !== '123456') {
-      this.setState({error: 'Incorrect username or password'});
-      return;
-    }
+
+    alert(JSON.stringify(this.state));
 
     this.setState({
       email: '',
@@ -33,7 +29,6 @@ class LoginForm extends React.Component {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <div className="error">{error}</div>
         <input
           name="email"
           type="email"
