@@ -14,6 +14,11 @@ class CheckoutForm extends React.Component {
   formHandler = (event) => {
     event.preventDefault();
     alert(JSON.stringify(this.state));
+    this.setState({
+      email: '',
+      name: '',
+      address: ''
+    });
   };
 
   render() {
