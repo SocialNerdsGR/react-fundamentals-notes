@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const startWarsMovies = [
+const movies = [
   {
     "title": "Star Wars: Episode I - The Phantom Menace",
     "episode_number": "1"
@@ -34,7 +34,7 @@ function Movie({title}) {
 
 class List extends React.Component {
   state = {
-    movies: startWarsMovies
+    movies
   };
 
   render() {
