@@ -16,6 +16,7 @@
 - [Shopping cart](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart)
     - [Render cart items](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart-render-cart)
     - [Remove from cart](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart-remove-from-cart)
+    - [Add to cart once](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart-add-to-cart-once)
     - [Decrease quantity](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart-decrease-quantity)
     - [Cart items component](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart-separate-cart-items-component)
     - [CheckoutForm component](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart-checkout-form)
