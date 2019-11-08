@@ -28,7 +28,7 @@ const startWarsMovies = [
   }
 ];
 
-function Movie({title, episode_number}) {
+function Movie({title}) {
   return <li>{title}</li>;
 }
 
