@@ -97,6 +97,8 @@ export default class App extends React.Component {
                 ))
               }
             </ul>
+            <div>Total:
+            </div>
           </div>
         </div>
       </div>
