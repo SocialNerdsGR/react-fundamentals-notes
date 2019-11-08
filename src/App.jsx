@@ -7,7 +7,8 @@ export default class App extends React.Component {
   state = {
     products: [],
     cartItems: [],
-    checkoutFormVisible: false
+    checkoutFormVisible: false,
+    query: ''
   };
 
   async componentDidMount() {
@@ -71,15 +72,24 @@ export default class App extends React.Component {
     this.setState({checkoutFormVisible: true});
   };
 
+  handleSearch = (event) => {
+    this.setState({query: event.target.value});
+  };
+
   render() {
-    const {products, cartItems, checkoutFormVisible} = this.state;
+    const {products, cartItems, checkoutFormVisible, query} = this.state;
+    const filteredProducts = products.filter(product => {
+      const regex = new RegExp(query, 'i');
+      return product.name.match(regex);
+    });
+
     return (
       <div className="app">
         <h1>SocialNerds</h1>
-        <input className="search" type="text" placeholder="Search..."/>
+        <input className="search" type="text" placeholder="Search..." value={query} onChange={this.handleSearch}/>
         <div className="main">
           <Products
-            products={products}
+            products={filteredProducts}
             addToCart={this.addToCart}/>
           <CartItems
             cartItems={cartItems}
