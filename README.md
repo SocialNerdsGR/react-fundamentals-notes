@@ -6,7 +6,7 @@
 - [State](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/05-state)
 - [Events handling](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/06-events-handling)
 - [Counter example](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/07-counter) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/07-counter-completed)
-- [Forms](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/08-forms) - [Forms Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/08-forms-completed)
+- [Forms](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/08-forms) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/08-forms-completed)
 - [Login form example](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/09-login-form) - [Solution](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/09-login-form-solution)
 - [Conditional rendering](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/11-conditional-rendering)
 - [Lists](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/12-lists)
