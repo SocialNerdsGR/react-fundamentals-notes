@@ -25,7 +25,7 @@ const CartItems = ({cartItems, increaseQuantity, decreaseQuantity, removeFromCar
               Total:
               {cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0)}
             </div>
-            <button onClick={showCheckoutForm}>Checkout</button>
+            <button disabled={cartItems.length === 0} onClick={showCheckoutForm}>Checkout</button>
           </ul> : <CheckoutForm cartItems={cartItems}/>
       }
     </div>
