@@ -9,7 +9,7 @@
 - [Forms](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/08-forms) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/08-forms-completed)
 - [Login form example](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/09-login-form) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/09-login-form-completed)
 - [Conditional rendering](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/11-conditional-rendering)
-- [Lists](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/12-lists)
+- [Lists](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/12-lists) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/12-lists-completed)
 - [Lifecycle methods](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/13-lifecycle-methods)
 - [HTTP requests](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/14-http-requests)
 - [HTTP training](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/15-http)
