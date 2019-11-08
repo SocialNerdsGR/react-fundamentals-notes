@@ -1,5 +1,6 @@
 # React fundamentals workshop notes
 
+- [React](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/00-react)
 - [JSX](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/01-jsx)
 - [Hello world example](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/03-hello-world) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/03-hello-world-completed)
 - [Components](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/04-components) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/04-components-completed)
