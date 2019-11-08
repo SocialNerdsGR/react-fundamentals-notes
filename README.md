@@ -1,7 +1,6 @@
 # React fundamentals workshop notes
 
 - [JSX](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/01-jsx)
-- [Rendering](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/02-rendering)
 - [Hello world example](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/03-hello-world) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/03-hello-world-completed)
 - [Components](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/04-components)
 - [Components example](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/04-components-example) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/04-components-completed)
