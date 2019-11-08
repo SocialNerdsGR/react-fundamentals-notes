@@ -91,7 +91,6 @@ export default class App extends React.Component {
               ))}
               <div>
                 Total:
-                {cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0)}
               </div>
             </ul>
           </div>
