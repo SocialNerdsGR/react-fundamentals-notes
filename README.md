@@ -12,7 +12,7 @@
 - [Lists](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/12-lists) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/12-lists-completed)
 - [Lifecycle methods](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/13-lifecycle-methods)
 - [HTTP requests](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/14-http-requests)
-- [HTTP training](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/15-http)
+- [HTTP training](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/15-http) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/15-http-completed)
 - [Shopping cart](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart)
     - [Render cart items](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart-render-cart)
     - [Remove from cart](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart-remove-from-cart)
