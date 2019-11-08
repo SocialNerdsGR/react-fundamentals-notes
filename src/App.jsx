@@ -9,7 +9,7 @@ export default class App extends React.Component {
 
   async componentDidMount() {
     try {
-      const response = await axios.get('http://localhost:3001/products');
+      const response = await axios.get('https://shopping-cart-json-server.herokuapp.com/products');
       this.setState({products: response.data});
     } catch (e) {
       alert('Something went wrong!');
@@ -32,11 +32,11 @@ export default class App extends React.Component {
     this.setState({cartItems: filteredItems});
   };
 
-  increaseQuantity = (product) => {
+  increaseQuantity = (cartItem) => {
     const {cartItems} = this.state;
 
     const items = cartItems.map(item => {
-      if (item.id === product.id) {
+      if (item.id === cartItem.id) {
         return {...item, quantity: item.quantity + 1};
       }
 
@@ -73,7 +73,7 @@ export default class App extends React.Component {
                     <span>{item.quantity}-</span>
                     <span>{item.name}</span>
                     <button onClick={() => this.increaseQuantity(item)}>+</button>
-                    <button className={`cart-remove`} onClick={() => this.removeFromCart(item.id)}>x</button>
+                    <button className={`remove`} onClick={() => this.removeFromCart(item.id)}>x</button>
                   </li>
                 ))
               }
