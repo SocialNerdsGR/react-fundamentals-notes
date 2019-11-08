@@ -11,14 +11,14 @@ export default class App extends React.Component {
 
   async componentDidMount() {
     try {
-      const response = await axios.get("http://localhost:3001/products");
+      const response = await axios.get("https://shopping-cart-json-server.herokuapp.com/products");
       this.setState({products: response.data});
     } catch (e) {
       alert("Something went wrong!");
     }
   }
 
-  addToCart = product => {
+  addToCart = (product) => {
     const {cartItems} = this.state;
     const item = cartItems.find(item => item.id === product.id);
     if (item) {
@@ -28,17 +28,17 @@ export default class App extends React.Component {
     this.setState({cartItems: [{...product, quantity: 1}, ...cartItems]});
   };
 
-  removeFromCart = id => {
+  removeFromCart = (id) => {
     const {cartItems} = this.state;
     const filteredItems = cartItems.filter(item => item.id !== id);
     this.setState({cartItems: filteredItems});
   };
 
-  increaseQuantity = product => {
+  increaseQuantity = (cartItem) => {
     const {cartItems} = this.state;
 
     const items = cartItems.map(item => {
-      if (item.id === product.id) {
+      if (item.id === cartItem.id) {
         return {...item, quantity: item.quantity + 1};
       }
 
@@ -48,15 +48,15 @@ export default class App extends React.Component {
     this.setState({cartItems: [...items]});
   };
 
-  decreaseQuantity = product => {
+  decreaseQuantity = (cartItem) => {
     const {cartItems} = this.state;
 
-    if (product.quantity === 1) {
-      return this.removeFromCart(product.id);
+    if (cartItem.quantity === 1) {
+      return this.removeFromCart(cartItem.id);
     }
 
     const items = cartItems.map(item => {
-      if (item.id === product.id) {
+      if (item.id === cartItem.id) {
         return {...item, quantity: item.quantity - 1};
       }
 
