@@ -45,7 +45,7 @@ class LoginForm extends React.Component {
           value={password}
           onChange={this.handleFields}
         />
-        <input type="submit" value="Login" onChange={this.handleFields}/>
+        <input type="submit" value="Login"/>
       </form>
     );
   }
