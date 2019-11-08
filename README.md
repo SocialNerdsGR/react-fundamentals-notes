@@ -20,5 +20,3 @@
     - [Cart items component](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart-separate-cart-items-component)
     - [CheckoutForm component](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart-checkout-form)
     - [TotalAmount component](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart-total-price-component)
-- [Context](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/18-context)
-- [Hooks](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/16-hooks)
