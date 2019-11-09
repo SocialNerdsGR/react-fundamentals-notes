@@ -4,6 +4,7 @@ import axios from 'axios';
 export default class App extends React.Component {
   state = {
     products: [],
+    cartItems: []
   };
 
   async componentDidMount() {
