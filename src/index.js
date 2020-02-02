@@ -4,29 +4,27 @@ import "./style.css";
 
 class LoginForm extends React.Component {
   state = {
-    email: '',
-    password: ''
+    email: "",
+    password: ""
   };
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     event.preventDefault();
 
     alert(JSON.stringify(this.state));
 
     this.setState({
-      email: '',
-      password: '',
-      error: ''
+      email: "",
+      password: "",
+      error: ""
     });
   };
 
-  handleFields = (event) => {
-    this.setState({[event.target.name]: event.target.value});
+  handleFields = event => {
+    this.setState({ [event.target.name]: event.target.value });
   };
 
   render() {
-    const {email, password} = this.state;
-
     return (
       <form onSubmit={this.handleSubmit}>
         <input
@@ -34,7 +32,7 @@ class LoginForm extends React.Component {
           type="email"
           required
           placeholder="Email"
-          value={email}
+          value={this.state.email}
           onChange={this.handleFields}
         />
         <input
@@ -42,13 +40,13 @@ class LoginForm extends React.Component {
           type="password"
           required
           placeholder="Password"
-          value={password}
+          value={this.state.password}
           onChange={this.handleFields}
         />
-        <input type="submit" value="Login"/>
+        <input type="submit" value="Login" />
       </form>
     );
   }
 }
 
-ReactDOM.render(<LoginForm/>, document.getElementById("root"));
+ReactDOM.render(<LoginForm />, document.getElementById("root"));
