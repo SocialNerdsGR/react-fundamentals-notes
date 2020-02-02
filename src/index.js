@@ -7,8 +7,7 @@ class Counter extends React.Component {
   };
 
   handleIncrement = () => {
-    const { count } = this.state;
-    this.setState({count: count + 1});
+    this.setState({ count: this.state.count + 1 });
   };
 
   render() {
@@ -20,6 +19,5 @@ class Counter extends React.Component {
     );
   }
 }
-
 
 ReactDOM.render(<Counter />, document.querySelector("#root"));
