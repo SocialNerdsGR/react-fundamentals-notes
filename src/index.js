@@ -2,16 +2,38 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "./style.css";
 
-function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+function useForm(initialValue) {
+  const [state, setState] = useState(initialValue);
 
+  function fieldHandler(event) {
+    setState({
+      ...state,
+      [event.target.name]: event.target.value
+    });
+  }
+
+  function clearFields() {
+    setState(
+      Object.keys(state).reduce((acc, key) => {
+        acc[key] = "";
+        return acc;
+      }, {})
+    );
+  }
+
+  return [state, fieldHandler, clearFields];
+}
+
+function LoginForm() {
+  const [{ email, password }, fieldHandler, clearFields] = useForm({
+    email: "",
+    password: ""
+  });
   function handleSubmit(event) {
     event.preventDefault();
 
     alert(JSON.stringify({ email, password }));
-    setEmail("");
-    setPassword("");
+    clearFields();
   }
 
   return (
@@ -22,9 +44,7 @@ function LoginForm() {
         required
         placeholder="Email"
         value={email}
-        onChange={event => {
-          setEmail(event.target.value);
-        }}
+        onChange={fieldHandler}
       />
       <input
         name="password"
@@ -32,9 +52,7 @@ function LoginForm() {
         required
         placeholder="Password"
         value={password}
-        onChange={event => {
-          setPassword(event.target.value);
-        }}
+        onChange={fieldHandler}
       />
       <input type="submit" value="Login" />
     </form>
