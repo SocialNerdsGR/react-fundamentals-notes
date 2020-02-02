@@ -7,13 +7,11 @@ class Counter extends React.Component {
   };
 
   handleIncrement = () => {
-    const { count } = this.state;
-    this.setState({count: count + this.props.step});
+    this.setState({ count: this.statecount + this.props.step });
   };
 
   handleDecrement = () => {
-    const { count } = this.state;
-    this.setState({count: count - this.props.step});
+    this.setState({ count: this.state.count - this.props.step });
   };
 
   render() {
@@ -27,5 +25,7 @@ class Counter extends React.Component {
   }
 }
 
-
-ReactDOM.render(<Counter step={2} count={5} />, document.querySelector("#root"));
+ReactDOM.render(
+  <Counter step={2} count={5} />,
+  document.querySelector("#root")
+);
