@@ -7,7 +7,7 @@ class Counter extends React.Component {
   };
 
   handleIncrement = () => {
-    this.setState({ count: this.statecount + this.props.step });
+    this.setState({ count: this.state.count + this.props.step });
   };
 
   handleDecrement = () => {
