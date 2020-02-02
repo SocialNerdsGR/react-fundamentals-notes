@@ -5,7 +5,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <input type="text" />
         <a href="#">Link</a>
         <button>Click</button>
       </div>
