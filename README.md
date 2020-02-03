@@ -27,3 +27,4 @@
   - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/17-shopping-cart-completed)
 - [useState](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/18-hook-use-state)
 - [Login form using hooks example](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/19-login-form-hooks) - [Completed](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/19-login-form-hooks-completed) - [Custom hook](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/19-login-form-hooks-custom-hook)
+- [useEffect](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/20-hook-use-effect) - [useEffect counter completed](<[useEffect](https://codesandbox.io/s/github/SocialNerdsGR/react-fundamentals-notes/tree/20-hook-use-effect-20-hook-use-effect-counter-complete)
