@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Products from "./components/Products";
 import CartItems from "./components/CartItems";
+import CheckoutForm from './components/CheckoutForm';
 
 export default class App extends React.Component {
   state = {
@@ -81,14 +82,14 @@ export default class App extends React.Component {
           <Products
             products={products}
             addToCart={this.addToCart}/>
-          <CartItems
+          {!checkoutFormVisible ? <CartItems
             cartItems={cartItems}
             decreaseQuantity={this.decreaseQuantity}
             increaseQuantity={this.increaseQuantity}
             removeFromCart={this.removeFromCart}
             checkoutFormVisible={checkoutFormVisible}
             showCheckoutForm={this.showCheckoutForm}
-          />
+          /> :  <CheckoutForm cartItems={cartItems}/>}
         </div>
       </div>
     );
